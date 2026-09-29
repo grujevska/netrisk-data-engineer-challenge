@@ -1,0 +1,8 @@
+netrisk_challenge:
+  target: dev
+
+  outputs:
+    dev:
+      type: duckdb
+      path: netrisk.duckdb
+      threads: 4

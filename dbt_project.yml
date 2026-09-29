@@ -1,0 +1,26 @@
+name: 'netrisk_challenge'
+version: '1.0.0'
+config-version: 2
+
+profile: 'netrisk_challenge'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+
+models:
+  netrisk_challenge:
+    staging:
+      +materialized: view
+
+    intermediate:
+      +materialized: view
+
+    marts:
+      +materialized: table
+
+seeds:
+  netrisk_challenge:
+    conversions:
+      +column_types:
+        premium: varchar
